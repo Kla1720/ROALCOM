@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/boot.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+
+<body>
+    <div class="btn-wsp">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
+                            alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chatbot de Soporte</h4>
+                        <p class="chatbox__description--header">Hola mi nombre es ROCOM, en que te puedo ayudar</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <a onClick="muestra_oculta('contenido')" class="btn-wsp" target="_blank">
+                    <img src="../icofesa.com/sistema/logo/png_bot.png" />
+
+                </a>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Escribe un mensaje...">
+                    <button class="chatbox__send--footer send__button">Enviar</button>
+                </div>
+            </div>
+            <div class="btn-wsp">
+                <a><img src="{{url_for('static', filename='images/png_bot.png')}}" /></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var $SCRIPT_ROOT = "{{ request.script_root | tojson | safe }}";
+    </script>
+
+<script src="{{url_for('static', filename='js/app.js')}}"></script>
+
+</body>
+
+</html>

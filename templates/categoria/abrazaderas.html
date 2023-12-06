@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <style>
+     
+    .swiper {
+      padding: 14px;
+      text-align: center;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 -4px; /* Añadido para compensar los márgenes negativos */
+    }
+
+    .swiper-slide {
+      flex: 0 0 calc(25% - 8px); /* 4 columnas con espacio entre ellas */
+      padding: 4px;
+      border: 1px solid #0093e2;
+      color: black;
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+
+
+  </style>
+</head>
+<body>
+<h2>
+  HOLA
+</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {% for productos in productos %}
+      <div class="swiper-slide" style="padding: 4px; border: 1px solid #0093e2; color: black;">
+        <!-- Ajusta la ruta de la imagen según la ubicación real de tus imágenes -->
+       <!-- Agrega esto para depurar las rutas -->
+      
+      <img src="{{ productos[6] }}" style="width: 265px; height: 265px; display: block; margin: 0 auto;">
+
+
+        <div class="card-description">
+          <div class="card-title" style="align: left; text-transform: uppercase;">
+            <strong>{{ productos[1] }}</strong>
+          </div>
+
+          <div style="background: #00b9e2; width: 100%; padding: 3px;">
+            <!-- Asegúrate de ajustar la URL del enlace según tus necesidades -->
+            <a style="color: white; font-weight: bold;" target="_blank"
+              href="producto{{ productos[0] }}.html?id={{ productos[0] }}">VER PRODUCTO</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+        
+    </div>
+  </div>
+
+</body>
+</html>

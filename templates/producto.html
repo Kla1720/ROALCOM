@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from portotheme.com/html/porto_ecommerce/demo_4/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 31 Aug 2020 08:36:20 GMT -->
+
+<!-- Mirrored from www.ROALCOM.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Oct 2023 02:09:13 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>ROALCOM</title>
+
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Porto - Bootstrap eCommerce Template">
+    <meta name="author" content="SW-THEMES">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/roalcom/assets/images/icons/favicon.png">
+
+
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cabecera.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/smartslider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/kingcomposer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css') }}">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}">
+    <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
+
+    <script src="{{url_for('static', filename='js/busqueda.js')}}"></script>
+
+
+    <script src="{{ url_for('static', filename='js/myswiper.js') }}"></script>
+
+    <header>
+        {% include 'cabecera.html' %}
+    </header>
+
+
+
+
+
+    <a onClick="muestra_oculta('contenido')" class="btn-wsp" target="_blank">
+        <i class="fa fa-whatsapp icono"></i>
+
+
+    </a>
+    <main class="main">
+        <div>
+            {% for producto in productos %}
+            <br>
+            <div class="product-single-container product-single-default">
+                <div class="row">
+                    <div class="col-md-4 product-single-gallery" style="padding:2px;">
+                        <div class="product-slider-container">
+                            <div class="product-single-carousel owl-carousel owl-theme">
+                                <div class="product-item">
+
+                                    <img class="product-single-image" src="/{{ producto[6]}}"
+                                        data-zoom-image="/{{producto[6]}}" style="width:400px;height:400px;" />
+                                </div>
+                                <div class="product-item">
+                                    <img class="product-single-image" src="assets/images/icons/roalcom.png"
+                                        data-zoom-image="assets/images/icons/roalcom.png"
+                                        style="width:400px;height:400px;" />
+                                </div>
+                                <div class="product-item">
+                                    <img class="product-single-image" src="assets/images/icons/roalcom.png"
+                                        data-zoom-image="assets/images/icons/roalcom.png"
+                                        style="width:400px;height:400px;" />
+                                </div>
+
+                            </div>
+                            <!-- End .product-single-carousel -->
+                            <span class="prod-full-screen">
+                                <i class="icon-plus"></i>
+                            </span>
+                        </div>
+                        <div class="prod-thumbnail owl-dots" id='carousel-custom-dots'>
+                            <div class="owl-dot">
+                                <img src="/{{producto[6]}}" style="width:130px;height:130px;" />
+                            </div>
+                            <div class="owl-dot">
+                                <img src="assets/images/icons/roalcom.png" style="width:130px;height:130px;" />
+                            </div>
+                            <div class="owl-dot">
+                                <img src="assets/images/icons/roalcom.png" style="width:130px;height:130px;" />
+                            </div>
+
+                        </div>
+                    </div><!-- End .product-single-gallery -->
+
+                    <div class="col-md-8 product-single-details">
+                        <div class="form-group row">
+                            <div class="col-md-7 col-sm-7 col-xs-12">
+
+                                <h1 class="product-title">{{producto[1]}}</h1>
+
+
+
+
+
+                                <!-- End .price-box -->
+
+                                <div style="color: #000;">
+                                    Disponibilidad <font color="#2E9AFE"><strong><i class="fa fa-check-square"></i>
+                                            ENVÍO INMEDIATO</strong></font>
+                                    <table style="width:100%;" border="0">
+                                        <tr>
+                                            <td>
+                                                <table style="width:60%;">
+
+                                                    <tr>
+                                                        <td colspan=2>VISTA RAPIDA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left"><strong>MARCA:</strong></td>
+                                                        <td align="left">ROALCOM</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="left"><strong>PRESENTACIÓN </strong></td>
+                                                        <td align="left">4 PIEZAS</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left"><strong>USO</strong></td>
+                                                        <td align="left">DESAGUE</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="left"><strong>PESO</strong></td>
+                                                        <td align="left">450KG</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="left"><strong>MEDIDA</strong><br><br></td>
+                                                        <td align="left"><span
+                                                                style="background:#fee117;color:black;padding:1px;"><strong>60CM
+                                                                    DE DIAMETRO </strong></span><br><br></td>
+                                                    </tr>
+
+
+
+
+
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <table valign="top" style="width:100%;">
+                                                    <tr>
+                                                        <td>
+
+
+
+                                                            <div>
+
+
+
+                                                            </div>
+
+
+
+
+
+
+
+
+                                </div><!-- End .product-action -->
+
+                                </td>
+
+                                </tr>
+
+                                </table>
+
+                                </td>
+                                </tr>
+                                </table>
+
+
+
+
+
+
+
+
+
+
+
+                            </div><!-- End .product-desc -->
+
+                            <input type="hidden" id="precio_venta_22878" value="3000">
+                            <input type="hidden" id="caja_22878" value="1">
+
+
+
+
+
+
+
+
+                        </div><!-- aqui-->
+
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+
+                            <div style="background:#f2f2f2;width:100%;">
+
+                                <br>
+                                <div style="background:#1d73be;width:100%;margin:10px;color:white;padding:10px;">
+                                    TIEMPOS DE ENTREGA</div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-truck" style="color:black"></i>&nbsp;<h style="color:black">Lima y
+                                    Callao 24 a 48 horas.</h>
+
+                                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-tags"
+                                    style="color: #000;"></i>&nbsp;
+                                <h style="color: #000;">Envíos a todo el Perú.</h>
+                                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <i class="fa fa-shopping-cart" style="color: #000;"></i>&nbsp;<h style="color: #000;">
+                                    Recojo en tienda.</h>
+
+
+
+                                <div style="background:#1d73be;width:100%;color:white;margin:10px;padding:10px;">
+                                    MÉTODOS DE PAGO</div>
+                            </div>
+
+
+
+                        </div>
+
+                        <!--<img src="icofes5.png">-->
+                    </div>
+
+                    <table border="0" style="width:100%;">
+                        <tr>
+                            <td style="width:50%;" align="top">
+                                <table>
+                                    <tr>
+                                        <td style="color: #000;">ENVÍOS A PROVINCIA POR:</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><img src="icofes4.png" width="300px"></td>
+                                        <td>
+                                            <div style="width:100%;"><a
+                                                    href="https://api.whatsapp.com/send?phone=51990015093"
+                                                    target="_blanck"><img width="200px" heigt="200px"
+                                                        src="loquieroicofesa.jpg"></a></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+
+                                            <br><a target="_blank" href="http://icofesa.com/sistema/fichastecnicas/"
+                                                style="border: 1px solid #0174DF;padding: 10px;border-radius: 10px;">
+                                                <font color="#0174DF"><strong>Ver Ficha Tecnica</strong></font>
+                                            </a>
+
+
+
+
+                                            <br><br>
+                                        </td>
+
+
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><img src="icofes7.png" width="100%"></td>
+
+
+
+                                    </tr>
+
+                                </table>
+                            </td>
+
+                            <td align="top">
+                                <table>
+                                    <tr>
+                                        <td colspan="2"><img src="icofes6.png">
+
+
+
+
+
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td align="top"><br><img src="icofes2.png"
+                                                style="width:300px;height:100px;"><br><br></td>
+
+                                        <td style="color: #000;">
+                                            <font style="font-size: 8pt;">
+                                                <strong>·Envío eficiente.</strong> Todos los envíos están 100%
+                                                asegurados
+                                                <br><strong>·12 Meses de garantía</strong> en todos los productos
+                                            </font>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div><!-- End .row -->
+        {% endfor %}
+        </div><!-- End .product-single-container -->
+
+        <div class="products-section pt-0">
+            <h2 class="section-title">Productos Similares:</h2>
+
+
+            {% include 'productos_sim.html' %}
+
+
+        </div>
+        </div><!-- End .products-section -->
+        </div><!-- End .container -->
+    </main><!-- End .main -->
+
+
+
+    <footer class="footer bg-dark">
+
+        {% include 'footer.html' %}
+    </footer><!-- End .footer -->
+    </div><!-- End .page-wrapper -->
+
+
+
+
+
+    </nav><!-- End .mobile-nav -->
+
+
+    <a id="scroll-top" href="#top" title="Top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+    <!-- Plugins JS File -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/optional/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins.min.js') }}"></script>
+
+    <!-- Main JS File -->
+    <script src="{{ url_for('static', filename='js/main.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/swiper.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/myswiper.js') }}"></script>
+
+
+    </body>
+
+    <!-- Mirrored from portotheme.com/html/porto_ecommerce/demo_4/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 31 Aug 2020 08:36:37 GMT -->
+
+    <!-- Mirrored from www.ROALCOM.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Oct 2023 02:12:38 GMT -->
+
+</html>

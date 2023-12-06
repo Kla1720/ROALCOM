@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from portotheme.com/html/porto_ecommerce/demo_4/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 31 Aug 2020 08:36:20 GMT -->
+
+<!-- Mirrored from www.ROALCOM.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Oct 2023 02:09:13 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>ROALCOM</title>
+
+  <meta name="keywords" content="HTML5 Template" />
+  <meta name="description" content="Porto - Bootstrap eCommerce Template">
+  <meta name="author" content="SW-THEMES">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/roalcom/assets/images/icons/favicon.png">
+
+
+
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cabecera.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css') }}">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}">
+  <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
+
+  
+  
+<script src="{{ url_for('static', filename='js/myswiper.js') }}"></script>
+
+
+
+
+</head>
+
+{% include 'cabecera.html' %}
+</header><!-- End .header -->
+  
+  <body>
+    <br>
+    <form action="#" method="post" style="padding: 10px;" >
+      <label for="tipoDocumento">SELECCIONA CATEGORIA:</label>
+      <select id="tipoDocumento" name="tipoDocumento" onchange="mostrarInformacionCategoria()">
+        <option value="">SELECCIONE</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='abrazaderas') }}">Abrazaderas</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='bridas') }}">Bridas</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='codos') }}">Codos</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='cajas') }}">Cajas</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='marcos') }}">Marcos</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='tapas') }}">Tapas</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='adaptadores') }}">Adaptadores</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='coplas') }}">Coplas</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='giacomini') }}">Giacomini</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='hidrantes') }}">Hidrantes</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='juntas') }}">Juntas</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='tapones') }}">Tapones</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='valdes') }}">Valdes</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='medidores') }}">Medidores</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='reducciones') }}">Reducciones</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='tees') }}">Tees</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='uniones') }}">Uniones</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='valvulas') }}">Valvulas</option>
+        <option value="{{ url_for('mostrar_categoria', categoria='productos_G') }}">otros...</option>
+      </select>
+    </form>
+  
+    <div id="resultado"></div>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Últimos Productos Agregados</title>
+      <style>
+         
+        .swiper {
+          padding: 14px;
+          text-align: center;
+        }
+    
+        .swiper-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin: 0 -4px; /* Añadido para compensar los márgenes negativos */
+        }
+    
+        .swiper-slide {
+          flex: 0 0 calc(25% - 8px); /* 4 columnas con espacio entre ellas */
+          padding: 4px;
+          border: 1px solid #0093e2;
+          color: black;
+          box-sizing: border-box;
+          margin-top: 5px;
+        }
+    
+    
+      </style>
+  </body>
+  </html>
+  
+
+
+  <script>
+    function cargarHTML(url, callback) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => callback(data))
+        .catch(error => console.error('Error al cargar el HTML:', error));
+    }
+
+    function mostrarInformacionCategoria() {
+      var categoriaSeleccionada = document.getElementById("tipoDocumento").value;
+
+      if (categoriaSeleccionada) {
+        cargarHTML(categoriaSeleccionada, function (contenidoHTML) {
+          document.getElementById("resultado").innerHTML = "Información de la categoría: " + contenidoHTML;
+        });
+      } else {
+        document.getElementById("resultado").innerHTML = "";
+      }
+    }
+  </script>
+
+</body>
+
+
+<footer class="footer bg-dark">
+  
+  {% include 'footer.html' %}
+  </footer><!-- End .footer -->
+  </div><!-- End .page-wrapper -->
+  
+  
+  
+  
+  
+  </nav><!-- End .mobile-nav -->
+  
+  
+  <a id="scroll-top" href="#top" title="Top" role="button"><i class="fas fa-chevron-up"></i></a>
+  
+  <!-- Plugins JS File -->
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/optional/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/plugins.min.js') }}"></script>
+  
+  <!-- Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/swiper.js') }}"></script>
+  
+  <script src="{{ url_for('static', filename='js/myswiper.js') }}"></script>
+  
+  
+  </body>
+  
+  <!-- Mirrored from portotheme.com/html/porto_ecommerce/demo_4/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 31 Aug 2020 08:36:37 GMT -->
+  
+  <!-- Mirrored from www.ROALCOM.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Oct 2023 02:12:38 GMT -->
+  
+  </html>

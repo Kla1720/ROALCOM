@@ -1,0 +1,53 @@
+<br>
+<div>
+
+
+
+    <h2 class="section-title">PRODUCTOS MÁS VENDIDOS</h2>
+
+    <div class="page-wrapper">
+        <main class="main">
+
+            <div class="swiper mySwiper" style="padding:14px;text-align:center;">
+                <div class="swiper-wrapper">
+
+                    {% for producto in productossim %}
+            <div class="swiper-slide" style="padding: 4px; border: 1px solid #0093e2; color: black;">
+                <!-- Ajusta la ruta de la imagen según la ubicación real de tus imágenes -->
+                <img src="/{{ producto[6]}}" style="width: 265px; height: 265px; display: block; margin: 0 auto;">
+ 
+                <div class="card-description">
+                    <div class="card-title" style="text-align: center; text-transform: uppercase;">
+                        <strong>{{ producto[1] }}</strong>
+                    </div>
+ 
+                    <div style="background: #00b9e2; width: 100%; padding: 3px;">
+                        <!-- Asegúrate de ajustar la URL del enlace según tus necesidades -->
+                        <a style="color: white; font-weight: bold;" target="_blank"
+                            href="/producto/{{producto[0]}}">VER PRODUCTO</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+</div>
+</div>
+<br>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-scrollbar"></div>
+<div class="swiper-pagination"></div>
+</div>
+
+
+
+
+</main><!-- End .main -->
+
+</div><!-- End .page-wrapper -->
+
+
+
+
+<!-- Initialize Swiper -->
+</div>
