@@ -1,0 +1,77 @@
+{
+    "intents":[
+        {
+            "tag":"saludos",
+            "patterns":[    
+                "Hola",
+                "Buenos dias",
+                "Buenas tardes",
+                "Buenas",
+                "Que tal",
+                "Necesito ayuda"
+            ],
+            "responses":[
+                "Hola, mi nombre es ROCOM, ¿En qué puedo ayudarte?",
+                "Bienvenido a Roalcom, mi nombre es ROCOM, ¿En qué puedo ayudarte?",
+                "Hola, ¿Cómo puedo ayudarte?",
+                "¿En qué puedo ayudarte?"
+            ] 
+        },
+        {
+            "tag":"despedidas",
+            "patterns":[
+                "Hasta luego",
+                "Muchas gracias por la ayuda",
+                "Hasta pronto",
+                "Adiós",
+                "Chao"
+            ],
+            "responses":[
+                "Muchas gracias por usar nuestros servicios, No dudes en regresar, si necesitas mi ayuda",
+                "Hasta pronto y espero haber sido de utilidad",
+                "Adiós vuelve pronto",
+                "Gracias por usar nuestros servicios",
+                "Hasta luego, mi nombre es ROCOM y no dudes en consultarme cualquier duda que tengas nuevamente",
+                "Espero que tengas un buen dia"
+            ] 
+        },
+        {
+              "tag":"ubicación",
+              "patterns":[
+                  "¿Tienen algún local?",
+                  "Alguna dirección donde ubicarlos",
+                  "Por donde quedan ubicados",
+                  "Cual es su dirección",
+                  "Donde queda el local",
+                  "dirección"
+              ],
+              "responses":[
+                  "Nos encontramos ubicados en Av. Argentina Nro. 339 Int. 12 Pabellon A, C.C. La Bellota – Lima",
+                  "Tenemos una tienda que está ubicada en Av. Argentina Nro. 339 Int. 12 Pabellon A, C.C. La Bellota – Lima",
+                  "Nuestro local está ubicado en Av. Argentina Nro. 339 Int. 12 Pabellon A, C.C. La Bellota – Lima",
+                  "Estamos localizados en Av. Argentina Nro. 339 Int. 12 Pabellon A, C.C. La Bellota – Lima"
+              ]
+        },
+        {
+              "tag":"Reclamo o Sugerencia",
+              "patterns":[
+                  "Me gustaría realizar un reclamo",
+                  "Me gustaría realizar una sugerencia",
+                  "Tengo un reclamo",
+                  "Tengo una sugerencia",
+                  "Puedo dar un reclamo",
+                  "Puedo dar una sugerencia",
+                  "Deseo hacer un reclamo",
+                  "Deseo hacer una sugerencia",   
+                  "Quiero reclamar algo",
+                  "Quiero sugerir algo"
+              ],
+              "responses":[
+                  "Para cualquier consulta o reclamo dirijase al siguiente link:",
+                  "Si desea realizar algún reclamo o sugerencia, por favor haga click en el siguiente enlace:",
+                  "Por favor dirijase a esta pagina:"
+              ]
+        }
+  
+    ]
+  }
